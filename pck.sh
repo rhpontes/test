@@ -2,4 +2,4 @@
 rm -rf ./dist
 mkdir -p ./dist
 
-env GOOS=linux GOARCH=arm64 go build -o ./dist/test
+env GOOS=linux GOARCH=amd64 go build -o ./dist/test
