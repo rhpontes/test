@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: testingress
+spec:
+  rules:
+  - host:
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: clients
+          servicePort: 3000
+      - path: /clients
+        backend:
+          serviceName: clients
+          servicePort: 3000
+      - path: /products
+        backend:
+          serviceName: products
+          servicePort: 3001
+      
