@@ -12,7 +12,11 @@ func main() {
 	router := mux.NewRouter().StrictSlash(true)
 
 	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Clients API Server")
+		fmt.Fprintln(w, "Products API Server")
+	})
+
+	router.HandleFunc("/products", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Products API Server")
 	})
 
 	router.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
@@ -24,5 +28,4 @@ func main() {
 		fmt.Println("Error on launch server")
 	}
 
-	fmt.Println("Server listening on port 3000")
 }
